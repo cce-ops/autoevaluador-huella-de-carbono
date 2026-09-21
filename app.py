@@ -34,7 +34,7 @@ except ImportError:
 # -----------------------------------------------------------------------------
 # CONFIGURACIÓN
 # -----------------------------------------------------------------------------
-st.set_page_config(page_title="Evaluación Académica con IA", layout="wide")
+st.set_page_config(page_title="Feedback tarea Huella de Carbono", layout="wide")
 
 # El ID de una carpeta no es secreto, pero mejor en Secrets: st.secrets["DRIVE_FOLDER_ID"]
 DRIVE_FOLDER_ID = st.secrets.get("DRIVE_FOLDER_ID", "1nbvHAOFCZU5DeV1fYhVIcf5zvpUnhUcN") \
@@ -313,7 +313,7 @@ with st.sidebar:
     if st.button("🔄 Recargar Drive"):
         st.cache_data.clear(); st.session_state.pop("base", None); st.rerun()
 
-st.title("Plataforma Integrada de Evaluaciones Académicas")
+st.title("Feedback de la tarea: Huella de Carbono")
 tab1, tab2 = st.tabs(["📋 Paso 1: Lista de cotejo", "📤 Paso 2: Entrega y feedback"])
 
 with tab1:
